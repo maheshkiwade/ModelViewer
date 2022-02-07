@@ -35,6 +35,7 @@ modelViewer.addEventListener("load", () => {
     let material = modelViewer.materialFromPoint(event.clientX, event.clientY);
 
     if(material != null) {
+      alert("I am an alert box!");
       material.pbrMetallicRoughness.
         setBaseColorFactor([Math.random(), Math.random(), Math.random()]);
     }
