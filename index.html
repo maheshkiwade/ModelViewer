@@ -35,7 +35,7 @@ modelViewer.addEventListener("load", () => {
     let material = modelViewer.materialFromPoint(event.clientX, event.clientY);
 
     if(material != null) {
-      aletr(Object.getOwnPropertyNames(material));
+      console.log(Object.getOwnPropertyNames(material));
 modelViewer.animationName = 'open1';
       modelViewer.play({repetitions:1});
       
