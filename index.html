@@ -39,18 +39,22 @@ modelViewer.addEventListener("load", () => {
       switch (material.name) {
   case 'Page1':
     modelViewer.animationName = 'Flipo1-2';
+          modelViewer.play({repetitions:1});
     break;
             case 'Page2':
     modelViewer.animationName = 'Flipc1-2';
+          modelViewer.play({repetitions:1});
     break;
             case 'Page3':
     modelViewer.animationName = 'Flipo2-3';
+          modelViewer.play({repetitions:1});
     break;
             case 'Page4':
     modelViewer.animationName = 'Flipc2-3';
+          modelViewer.play({repetitions:1});
     break;
       }
-      modelViewer.play({repetitions:1});
+      
       
     }
   }
