@@ -11,7 +11,7 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer id="pickMaterial" bounds="tight" src="Book.gltf" autoplay animation-name="Flip.001" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1">
+    <model-viewer id="pickMaterial" bounds="tight" src="Book.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1">
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -37,9 +37,13 @@ modelViewer.addEventListener("load", () => {
     if(material != null) {
       console.log(material.name);
       console.log(modelViewer.availableAnimations);
-          modelViewer.animationName = 'Flip';
-         
-      modelViewer.play();
+      if(material.name == "Page1")
+      {   modelViewer.animationName = "Page1-2Action";
+      }
+      if(material.name == "Page1")
+      {   modelViewer.animationName = "Page3-4Action";
+      }
+      modelViewer.play({repetitions : 1});
 
       
       
