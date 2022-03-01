@@ -39,7 +39,7 @@ modelViewer.addEventListener("load", () => {
       console.log(modelViewer.availableAnimations);
       if(material.name == "F1")
       {   
-        modelViewer.timeScale=1;
+        modelViewer.timeScale = 1;
         await modelViewer.updateComplete;
         modelViewer.play();
         console.log(modelViewer.currentTime);
@@ -57,9 +57,9 @@ modelViewer.addEventListener("load", () => {
       }
       if(material.name == "B1")
       {   
-        modelViewer.timeScale=-2;
+        modelViewer.timeScale = -1;
         await modelViewer.updateComplete;
-        modelViewer.pause();
+        modelViewer.play();
         console.log(modelViewer.currentTime);
         for (let i = 1; i < 100; i++) {
         setTimeout(function () {
