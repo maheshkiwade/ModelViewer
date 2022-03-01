@@ -36,9 +36,9 @@ modelViewer.addEventListener("load", () => {
 
     if(material != null) {
       console.log(material.name);
-      console.log(modelViewer.availableAnimations);
+      //console.log(modelViewer.availableAnimations);
       if(modelViewer.paused == true)
-      if(material.name.slice(0,1) == "F")
+      if(material.name.slice(0,1) == "F" && material.name.slice(1,2) == aimaindex)
       {   aimaindex++;
         animate(0.8*aimaindex);
         
