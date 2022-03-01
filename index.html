@@ -65,13 +65,17 @@ modelViewer.addEventListener("load", () => {
               }, 10*i);
         }
    }
+    
+  startup();
+  async function startup() {
   modelViewer.animationName = "flip";
   await modelViewer.updateComplete;
+  modelViewer.updateComplete;
   modelViewer.play({repetitions:1});
   modelViewer.pause();
   modelViewer.currentTime=0;
   modelViewer.addEventListener("click", changeColor);
-
+  }
 });
 
 </script>
