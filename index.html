@@ -39,7 +39,7 @@ modelViewer.addEventListener("load", () => {
       console.log(modelViewer.availableAnimations);
       if(material.name == "F1")
       {   
-        animate();
+        animate(0.8);
         
       }
       if(material.name == "F2")
@@ -67,7 +67,7 @@ modelViewer.addEventListener("load", () => {
     }
   }
   
-  function animate() 
+  function animate(animtime) 
   {
         //  modelViewer.timeScale = 1;
         // await modelViewer.updateComplete;
@@ -78,11 +78,11 @@ modelViewer.addEventListener("load", () => {
             setTimeout(function () 
             {
                console.log(modelViewer.currentTime);
-               if(modelViewer.currentTime >= 0.8)
+               if(modelViewer.currentTime >= animtime)
                 {
                    console.log(modelViewer.currentTime);
                    modelViewer.pause();
-                   modelViewer.currentTime=0.8;
+                   modelViewer.currentTime=animtime;
                 }
               }, 10*i);
         }
