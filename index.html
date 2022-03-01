@@ -37,13 +37,18 @@ modelViewer.addEventListener("load", () => {
     if(material != null) {
       console.log(material.name);
       console.log(modelViewer.availableAnimations);
-      if(material.name == "Page1")
+      if(material.name == "F1")
       {   
        modelViewer.animationName = "flip";
        await modelViewer.updateComplete;
        modelViewer.play({repetitions : 1});
+       while (modelViewer.currentTime <= 20) {
+         console.log(modelViewer.currentTime);
+         sleep(5);
+        }
+        modelViewer.pause();
       }
-      if(material.name == "Page7")
+      if(material.name == "B1")
       {   modelViewer.pause();
       }
       
