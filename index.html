@@ -40,7 +40,7 @@ modelViewer.addEventListener("load", () => {
       if(material.name == "F1")
       {   
         animate();
-        }
+        
       }
       if(material.name == "F2")
       {   
@@ -96,6 +96,7 @@ modelViewer.addEventListener("load", () => {
             modelViewer.currentTime=0.8;
           }
          }, 10*i);
+        }
   }
   modelViewer.animationName = "flip";
   modelViewer.addEventListener("click", changeColor);
