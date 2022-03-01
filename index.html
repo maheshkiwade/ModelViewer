@@ -43,8 +43,9 @@ modelViewer.addEventListener("load", () => {
        await modelViewer.updateComplete;
        modelViewer.play({repetitions : 1});
         console.log(modelViewer.currentTime);
-        for (let i = 0; i < 10; i++) {
+        for (let i = 1; i < 10; i++) {
         setTimeout(function () {
+          console.log(modelViewer.currentTime);
           if(modelViewer.currentTime > 1)
           {
           console.log(modelViewer.currentTime);
