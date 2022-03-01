@@ -66,6 +66,9 @@ modelViewer.addEventListener("load", () => {
         }
    }
   modelViewer.animationName = "flip";
+  modelViewer.play({repetitions:1});
+  modelViewer.pause();
+  modelViewer.currentTime=0;
   modelViewer.addEventListener("click", changeColor);
 
 });
