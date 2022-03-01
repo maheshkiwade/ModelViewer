@@ -66,6 +66,7 @@ modelViewer.addEventListener("load", () => {
         }
    }
   modelViewer.animationName = "flip";
+  await modelViewer.updateComplete;
   modelViewer.play({repetitions:1});
   modelViewer.pause();
   modelViewer.currentTime=0;
