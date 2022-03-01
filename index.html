@@ -37,18 +37,10 @@ modelViewer.addEventListener("load", () => {
     if(material != null) {
       console.log(material.name);
       console.log(modelViewer.availableAnimations);
-      if(material.name == "F1")
+      if(material.name.slice(0,1) == "F1")
       {   
         animate(0.8);
         
-      }
-      if(material.name == "F2")
-      {   
-        animate(1.6);
-      }
-      if(material.name == "B1")
-      {   
-
       }
     }
   }
