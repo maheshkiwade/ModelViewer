@@ -46,10 +46,11 @@ modelViewer.addEventListener("load", () => {
         for (let i = 0; i < 10; i++) {
         setTimeout(function () {
           if(modelViewer.currentTime > 1)
+          {
           console.log(modelViewer.currentTime);
             modelViewer.pause();
             modelViewer.currentTime=1;
-          )
+          }
          }, 100*i);
         }
       }
