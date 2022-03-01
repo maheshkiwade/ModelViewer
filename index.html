@@ -42,12 +42,12 @@ modelViewer.addEventListener("load", () => {
        modelViewer.animationName = "flip";
        await modelViewer.updateComplete;
        modelViewer.play({repetitions : 1});
-       while (modelViewer.currentTime <= 20) 
-       {
-         console.log(modelViewer.currentTime);
-         sleep(5);
-        }
-        modelViewer.pause();
+        console.log(modelViewer.currentTime);
+        setTimeout(function () {
+          console.log(modelViewer.currentTime);
+            modelViewer.pause();
+         }, 2000);
+        
       }
       if(material.name == "B1")
       {   modelViewer.pause();
