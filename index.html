@@ -59,7 +59,7 @@ modelViewer.addEventListener("load", () => {
       {   
         modelViewer.timeScale=-2;
         await modelViewer.updateComplete;
-        modelViewer.play();
+        modelViewer.pause();
         console.log(modelViewer.currentTime);
         for (let i = 1; i < 100; i++) {
         setTimeout(function () {
