@@ -68,8 +68,8 @@ modelViewer.addEventListener("load", () => {
   }
   
   function animate() {
-          modelViewer.timeScale = 1;
-        await modelViewer.updateComplete;
+        <!--  modelViewer.timeScale = 1; -->
+        <!-- await modelViewer.updateComplete; -->
         modelViewer.play();
         console.log(modelViewer.currentTime);
         for (let i = 1; i < 100; i++) {
