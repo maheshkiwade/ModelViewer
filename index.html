@@ -43,11 +43,15 @@ modelViewer.addEventListener("load", () => {
        await modelViewer.updateComplete;
        modelViewer.play({repetitions : 1});
         console.log(modelViewer.currentTime);
+        for (let i = 0; i < 10; i++) {
         setTimeout(function () {
+          if(modelViewer.currentTime > 1)
           console.log(modelViewer.currentTime);
             modelViewer.pause();
-         }, 1000);
-        
+            modelViewer.currentTime=1;
+          )
+         }, 100*i);
+        }
       }
       if(material.name == "B1")
       {   modelViewer.pause();
