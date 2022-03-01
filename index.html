@@ -56,7 +56,22 @@ modelViewer.addEventListener("load", () => {
         }
       }
       if(material.name == "B1")
-      {   modelViewer.pause();
+      {   
+        modelViewer.timeScale=-1;
+        await modelViewer.updateComplete;
+        modelViewer.play();
+        console.log(modelViewer.currentTime);
+        for (let i = 1; i < 100; i++) {
+        setTimeout(function () {
+          console.log(modelViewer.currentTime);
+          if(modelViewer.currentTime <= 0)
+          {
+          console.log(modelViewer.currentTime);
+            modelViewer.pause();
+            modelViewer.currentTime=0;
+          }
+         }, 10*i);
+        }
       }
       
 
