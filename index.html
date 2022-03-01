@@ -51,7 +51,13 @@ modelViewer.addEventListener("load", () => {
         // await modelViewer.updateComplete;
         modelViewer.play();
         console.log(modelViewer.currentTime);
-        for (let i = 1; i < 90; i++) 
+        setTimeout(function () 
+            {
+              console.log(modelViewer.currentTime);
+              modelViewer.pause();
+              modelViewer.currentTime=animtime;
+            }, 800);
+        /*for (let i = 1; i < 90; i++) 
         {
             setTimeout(function () 
             {
@@ -63,7 +69,7 @@ modelViewer.addEventListener("load", () => {
                    modelViewer.currentTime=animtime;
                 }
               }, 10*i);
-        }
+        }*/
    }
     
   startup();
