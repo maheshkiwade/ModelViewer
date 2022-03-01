@@ -39,11 +39,12 @@ modelViewer.addEventListener("load", () => {
       console.log(modelViewer.availableAnimations);
       if(material.name == "Page1")
       {   modelViewer.animationName = "flip";
+       modelViewer.play({repetitions : 1 , pingpong : false});
       }
       if(material.name == "Page7")
       {   modelViewer.animationName = "Page3-4Action";
       }
-      modelViewer.play({repetitions : 1 , pingpong : false});
+      
 
       
       
