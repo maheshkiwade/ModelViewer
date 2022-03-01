@@ -39,20 +39,7 @@ modelViewer.addEventListener("load", () => {
       console.log(modelViewer.availableAnimations);
       if(material.name == "F1")
       {   
-        modelViewer.timeScale = 1;
-        await modelViewer.updateComplete;
-        modelViewer.play();
-        console.log(modelViewer.currentTime);
-        for (let i = 1; i < 100; i++) {
-        setTimeout(function () {
-          console.log(modelViewer.currentTime);
-          if(modelViewer.currentTime >= 0.8)
-          {
-          console.log(modelViewer.currentTime);
-            modelViewer.pause();
-            modelViewer.currentTime=0.8;
-          }
-         }, 10*i);
+        animate();
         }
       }
       if(material.name == "F2")
@@ -91,11 +78,24 @@ modelViewer.addEventListener("load", () => {
          }, 10*i);
         }
       }
-      
-
-      
-      
     }
+  }
+  
+  function animate() {
+          modelViewer.timeScale = 1;
+        await modelViewer.updateComplete;
+        modelViewer.play();
+        console.log(modelViewer.currentTime);
+        for (let i = 1; i < 100; i++) {
+        setTimeout(function () {
+          console.log(modelViewer.currentTime);
+          if(modelViewer.currentTime >= 0.8)
+          {
+          console.log(modelViewer.currentTime);
+            modelViewer.pause();
+            modelViewer.currentTime=0.8;
+          }
+         }, 10*i);
   }
   modelViewer.animationName = "flip";
   modelViewer.addEventListener("click", changeColor);
