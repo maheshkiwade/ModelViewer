@@ -35,6 +35,13 @@ const modelViewer = document.querySelector("model-viewer#pickMaterial");
 let animaindex = 0;
 let animetime = 0;
 let anidur = 0.85;
+document.querySelector('#prev').addEventListener('click', () => {
+  animate("F");
+});
+document.querySelector('#next').addEventListener('click', () => {
+  animate("B");
+});      
+      
 modelViewer.addEventListener("load", () => {
 
   const changeColor = async (event) => {
