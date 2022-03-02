@@ -29,6 +29,7 @@
     <script type="module">
 const modelViewer = document.querySelector("model-viewer#pickMaterial");
 let animaindex = 0;
+let animetime=0;
 modelViewer.addEventListener("load", () => {
 
   const changeColor = async (event) => {
@@ -53,7 +54,7 @@ modelViewer.addEventListener("load", () => {
   
   function animate(type) 
   {
-        let animetime=0;
+        
         if(type=="F"){
         modelViewer.currentTime=0.8*animaindex;
         animaindex++;
