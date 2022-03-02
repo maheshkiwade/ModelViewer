@@ -43,7 +43,7 @@ modelViewer.addEventListener("load", () => {
     let material = modelViewer.materialFromPoint(event.clientX, event.clientY);
 
     if(material != null) {
-      console.log(material.name);
+      //console.log(material.name);
       //console.log(modelViewer.availableAnimations);
       if(modelViewer.paused == true)
       {
@@ -80,7 +80,7 @@ modelViewer.addEventListener("load", () => {
         console.log(modelViewer.currentTime);
         setTimeout(function () 
             {
-              console.log(modelViewer.currentTime);
+              //console.log(modelViewer.currentTime);
               modelViewer.pause();
               modelViewer.currentTime=animetime;
             }, 800);
