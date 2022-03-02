@@ -53,10 +53,11 @@ modelViewer.addEventListener("load", () => {
   
   function animate(type) 
   {
+        let animetime=0;
         if(type=="F"){
         modelViewer.currentTime=0.8*animaindex;
         animaindex++;
-        let animetime=0.8*animaindex;
+        animetime=0.8*animaindex;
         }else
         {
         modelViewer.currentTime=(4-animaindex)*0.8;
