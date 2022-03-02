@@ -28,7 +28,7 @@
     
     <script type="module">
 const modelViewer = document.querySelector("model-viewer#pickMaterial");
-let aimaindex = 0;
+let animaindex = 0;
 modelViewer.addEventListener("load", () => {
 
   const changeColor = async (event) => {
@@ -38,18 +38,31 @@ modelViewer.addEventListener("load", () => {
       console.log(material.name);
       //console.log(modelViewer.availableAnimations);
       if(modelViewer.paused == true)
-      if(material.name.slice(0,1) == "F" && material.name.slice(1,2) == (aimaindex+1))
-      {   
-        animate();
-        
+      {
+        if(material.name.slice(0,1) == "F" && material.name.slice(1,2) == (animaindex+1))
+        {   
+        animate("F");
+        }
+         if(material.name.slice(0,1) == "B" && material.name.slice(1,2) == (animaindex))
+        {   
+        animate("B");
+        }
       }
     }
   }
   
   function animate() 
   {
-        modelViewer.currentTime=0.8*aimaindex;
-        aimaindex++;
+        if(F){
+        modelViewer.currentTime=0.8*animaindex;
+        animaindex++;
+        animetime=0.8*animaindex;
+        }else
+        {
+        modelViewer.currentTime=0.8*(animaindex-3);
+        animaindex++;
+        animetime=0.8*(animaindex-3);
+        }
         //  modelViewer.timeScale = 1;
         // await modelViewer.updateComplete;
         modelViewer.play();
@@ -58,7 +71,7 @@ modelViewer.addEventListener("load", () => {
             {
               console.log(modelViewer.currentTime);
               modelViewer.pause();
-              modelViewer.currentTime=0.8*aimaindex;
+              modelViewer.currentTime=animetime;
             }, 800);
         /*for (let i = 1; i < 90; i++) 
         {
