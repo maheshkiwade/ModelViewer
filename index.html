@@ -30,6 +30,7 @@
 const modelViewer = document.querySelector("model-viewer#pickMaterial");
 let animaindex = 0;
 let animetime=0;
+let anidur=0.85;
 modelViewer.addEventListener("load", () => {
 
   const changeColor = async (event) => {
@@ -56,14 +57,14 @@ modelViewer.addEventListener("load", () => {
   {
         
         if(type=="F"){
-        modelViewer.currentTime=0.8*animaindex;
+        modelViewer.currentTime=anidur*animaindex;
         animaindex++;
-        animetime=0.8*animaindex;
+        animetime=anidur*animaindex;
         }else
         {
-        modelViewer.currentTime=(4-animaindex)*0.8;
+        modelViewer.currentTime=(4-animaindex)*anidur;
         animaindex--;
-        animetime=(4-animaindex)*0.8;
+        animetime=(4-animaindex)*anidur;
         //animaindex=animaindex-2;
         }
         //  modelViewer.timeScale = 1;
