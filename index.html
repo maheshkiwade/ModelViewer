@@ -110,10 +110,12 @@ modelViewer.addEventListener("load", () => {
   modelViewer.currentTime=0;
   modelViewer.addEventListener("click", changeColor);
   document.querySelector('#prev').addEventListener('click', () => {
-  animate("F");
+    if(animaindex!=0 && modelViewer.paused == true)
+    animate("B");
   });
   document.querySelector('#next').addEventListener('click', () => {
-  animate("B");
+    if(animaindex!=2 && modelViewer.paused == true)
+    animate("F");
 });  
   }
 });
